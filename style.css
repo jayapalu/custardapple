@@ -9,9 +9,9 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
 	display: block; }
 body {
-	line-height: 1; 
+	line-height: 2; 
 	font:12px/20px Arial;
-	background:#e0f3ff url(bg.png) repeat scroll 0 0;
+	background:#e0f3ff url(CustardApplePic.jpg) repeat scroll 0 0;
 	}
 ol, ul {
 	list-style: none; }
@@ -19,7 +19,7 @@ ol, ul {
 /* Main Styles */	
 	
 #wrapper{
-	width:620px;
+	width:720px;
 	margin:0 auto;
 	margin-top:100px;
 }
