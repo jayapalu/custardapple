@@ -53,7 +53,7 @@
       color: #026;
       padding: 100px 25px;
       font-family: Montserrat, sans-serif;
-      #background-image: url(/Users/jayapal_uradi/Downloads/custarappleplatphoto.jpg);
+      #background-image: url(images/custardPhoto.jpg);
   }
   .container-fluid {
       padding: 60px 50px;
@@ -61,6 +61,21 @@
   .bg-grey {
       background-color: #f6f6f6;
   }
+  .head-class{
+      background-image: url("images/custardPhoto.jpg");
+      background-size: cover;
+      background-position: 0px -135px;
+      transform: scale(1.08);
+      background-size: cover;
+  }
+  .contact-class{
+      #background-size: cover;
+      text-align: left;
+      #background-position: 0px -135px;
+      #transform: scale(1.08);
+      #background-size: cover;
+  }
+
   .logo-small {
       color: #f4511e;
       font-size: 50px;
@@ -209,7 +224,7 @@
   }
   </style>
 </head>
-<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+<body id="CustardAppleFarm" data-spy="scroll" data-target=".navbar" data-offset="60">
 
 <nav class="navbar navbar-brand navbar-fixed-top">
   <div class="container">
@@ -219,7 +234,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>                        
       </button>
-      <a class="navbar-brand" href="#myPage">My Custard Apple Farm</a>
+      <a class="navbar-brand" href="#CustardAppleFarm">My Custard Apple Farm</a>
     </div>
 
     <div class="collapse navbar-collapse" id="myNavbar">
@@ -236,7 +251,7 @@
 </nav>
 
 
-<div class="jumbotron  text-center ">
+<div class="jumbotron  text-center head-class">
     <div class="container center">
     <div class="row">
       <h1>Custard Apple Farm</h1>
@@ -256,8 +271,36 @@
         </p>
     </div>
       <div class="col-sm-8">
-          <h1> About my custard apple farm</h1>
-          <>
+          <div class="w3-content w3-display-container">
+              <img class="mySlides" src="images/custarappleplatphoto.jpg" style="width:80%">
+              <img class="mySlides" src="img_lights.jpg" style="width:80%">
+              <img class="mySlides" src="img_mountains.jpg" style="width:80%">
+              <img class="mySlides" src="img_forest.jpg" style="width:80%">
+
+              <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+              <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+          </div>
+
+          <script>
+              var slideIndex = 1;
+              showDivs(slideIndex);
+
+              function plusDivs(n) {
+                  showDivs(slideIndex += n);
+              }
+
+              function showDivs(n) {
+                  var i;
+                  var x = document.getElementsByClassName("mySlides");
+                  if (n > x.length) {slideIndex = 1}
+                  if (n < 1) {slideIndex = x.length}
+                  for (i = 0; i < x.length; i++) {
+                      x[i].style.display = "none";
+                  }
+                  x[slideIndex-1].style.display = "block";
+              }
+          </script>
+
       </div>
 
   </div>
@@ -278,9 +321,16 @@
 </div>
 
 <!-- Container (Resources Section) -->
-<div id="resources" class="container-fluid text-center bg-grey">
+<div id="resources" class="container-fluid text-left bg-grey">
   <h2>Resources</h2><br>
-  <h4>Will be updated soon</h4>
+    <h4>Few of the inforamation files related to custard apple file are  below</h4>
+    <a href="resources/CustadAppleCompleteGuide.pdf" target="_blank"><h4>2. Custard apple guide</h4</a>
+    <a href="resources/CustardApple.pdf.pdf" target="_blank"><h4>2. Custard apple</h4></a>
+    <a href="resources/ICustardAppleInfoKit.pdf" target="_blank"><h4>3. CustardAppleInfoKit Qeensland Govt</h4></a>
+    <a href="resources/IPM package for Custard Apple.pdf" target="_blank"><h4>4. IPM package for Custard Apple</h4></a>
+    <p >If you want know about pruning and shaping open vase shape please refer the below documents</p>
+    <a href="resources/Simple-Pruning-open-vase-shape-Guide.pdf.pdf" target="_blank"><h4>5. Simple-Pruning-open-vase-shape-Guide</h4></a>
+    <a href="resources/Training-and-pruning-fruit-trees-in-north-carolina.pdf" target="_blank"><h4>6. Training-and-pruning-fruit-trees-in-north-carolina</h4></a>
 </div>
 
 <!-- Container (Gallery Section) -->
@@ -325,7 +375,7 @@
 <div id="contact" class="container-fluid bg-grey">
   <h2 class="text-center">CONTACT</h2>
   <div class="row">
-    <div class="col-sm-5">
+    <div class="col-sm-5 contact-class">
       <p>Contact us and we'll get back to you within 24 hours.</p>
       <p><span class="glyphicon glyphicon-map-marker"></span> Telangana, INDIA</p>
       <p><span class="glyphicon glyphicon-whatsapp"></span> <i style="font-size:24px" class="fa">&#xf232; </i> +91-9866560003</p>
@@ -369,16 +419,16 @@ Read more at: https://www.w3schools.com/graphics/google_maps_basic.asp
 -->
 
 <footer class="container-fluid text-center">
-  <a href="#myPage" title="To Top">
+  <a href="#CustardAppleFarm" title="To Top">
     <span class="glyphicon glyphicon-chevron-up"></span>
   </a>
-  <p>Bootstrap Theme Made By <a href="https://www.w3schools.com" title="Visit w3schools">www.w3schools.com</a></p>
+  <p>Home</p>
 </footer>
 
 <script>
 $(document).ready(function(){
   // Add smooth scrolling to all links in navbar + footer link
-  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+  $(".navbar a, footer a[href='#CustardAppleFarm']").on('click', function(event) {
     // Make sure this.hash has a value before overriding default behavior
     if (this.hash !== "") {
       // Prevent default anchor click behavior
