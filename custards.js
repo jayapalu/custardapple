@@ -70,7 +70,7 @@ function loadGallery(){
 	var currentLocatn=window.location.href;
 	var splitArray=currentLocatn.split('/');
 	var path=currentLocatn.substring(0,currentLocatn.indexOf(splitArray[splitArray.length-1]));
-	 $.get(path, function(data) 
+	 $.get("https://www.w3schools.com/bootstrap/", function(data) 
         {
             alert(data);
         });
