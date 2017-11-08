@@ -46,7 +46,8 @@ function loadMap(position){
             zoom: 15,
             center: coords,
             mapTypeControl: true,
-            mapTypeId: google.maps.MapTypeId.ROADMAP
+            //mapTypeId: google.maps.MapTypeId.ROADMAP
+            mapTypeId: google.maps.MapTypeId.HYBRID
         };
     //create the map, and place it in the HTML map div
     map = new google.maps.Map(
@@ -57,7 +58,7 @@ function loadMap(position){
     var marker = new google.maps.Marker({
     position: coords,
     map: map,
-    title: "Farm location!"
+    title: "Vidhath Custard apple farm"
     });
 }
 if (window.File && window.FileReader && window.FileList && window.Blob) {
