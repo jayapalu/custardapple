@@ -16,10 +16,29 @@
   .aboutPara {
       font-size: 19px;
       line-height: 1.475em;
-      color: #303030;
+      color: #077524;
       font-weight: 400;
       margin-bottom: 30px;
-  } 
+  }
+
+  .myFarmParaQue {
+      font-size: 19px;
+      line-height: 1.475em;
+      color: #FF0000;
+      font-weight: 400;
+      margin-bottom: 10px;
+  }
+
+
+  .myFarmParaAns {
+      font-size: 19px;
+      line-height: 1.475em;
+      color: #047b3f;
+      font-weight: 400;
+      margin-bottom: 10px;
+      margin-left: 20px
+  }
+
   .footerHandSign{
     font-size: 40px;
   }
