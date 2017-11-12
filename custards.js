@@ -71,7 +71,7 @@ function loadGallery(){
 	var currentLocatn=window.location.href;
 	var splitArray=currentLocatn.split('/');
 	var path=currentLocatn.substring(0,currentLocatn.indexOf(splitArray[splitArray.length-1]));
-	 $.get("https://github.com/:jayapalu/:custardapple/:tree/master/images", function(data) 
+	 $.get("https://github.com/jayapalu/custardapple/tree/master/images", function(data) 
         {
             alert(data);
         });
