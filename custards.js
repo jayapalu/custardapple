@@ -1,6 +1,20 @@
 
 $(document).ready(function(){
   // Add smooth scrolling to all links in navbar + footer link
+  google.maps.event.addDomListener(window, "load", loadMap);
+  loadGallery();
+  /*$.get("/Users/harikapunna/Desktop/custardapple/carousel/", function(data) 
+        {
+        	alert(data);
+        });*/
+
+  $.ajax({
+        url: '.',
+        success: function (data) {
+            console.log(data);
+        }
+  });
+
   $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
     // Make sure this.hash has a value before overriding default behavior
     if (this.hash !== "") {
@@ -21,7 +35,6 @@ $(document).ready(function(){
       });
     } // End if
   });
-  
   $(window).scroll(function() {
     $(".slideanim").each(function(){
       var pos = $(this).offset().top;
@@ -33,24 +46,31 @@ $(document).ready(function(){
     });
   });
 });
-
-if (navigator.geolocation) {
-	navigator.geolocation.getCurrentPosition(loadMap);
-} else {
-    alert("Geolocation API not supported.");
-}
-
-function loadMap(position){
-   var coords = new google.maps.LatLng(18.20102, 79.10076);
+var images = [
+	    'carousel/image1.jpg',
+	    'carousel/image2.jpg',
+	    'carousel/image3.jpg',
+	    'carousel/image4.jpg',
+	    'carousel/image5.jpg',
+	    'carousel/image6.jpg',
+	    'carousel/image1.jpg',
+	    'carousel/image2.jpg',
+	    'carousel/image3.jpg',
+	    'carousel/image4.jpg',
+	    'carousel/image5.jpg',
+	    'carousel/image6.jpg',
+	    'carousel/image7.jpg'
+	];
+function loadMap() {
+  var coords = new google.maps.LatLng(18.20102, 79.10076);
    var mapOptions = {
             zoom: 15,
             center: coords,
             mapTypeControl: true,
-            //mapTypeId: google.maps.MapTypeId.ROADMAP
             mapTypeId: google.maps.MapTypeId.HYBRID
         };
     //create the map, and place it in the HTML map div
-    map = new google.maps.Map(
+    var map = new google.maps.Map(
     document.getElementById("locateOnMap"), mapOptions
     );
 
@@ -58,22 +78,57 @@ function loadMap(position){
     var marker = new google.maps.Marker({
     position: coords,
     map: map,
-    title: "Vidhath Custard apple farm"
+    title: "Vidhath Custard Apple Farm"
     });
+    marker.setMap(map);
 }
-if (window.File && window.FileReader && window.FileList && window.Blob) {
-  // Great success! All the File APIs are supported.
-	loadGallery();
-} else {
-  alert('The File APIs are not fully supported in this browser.');
-}
+
 function loadGallery(){
-	var currentLocatn=window.location.href;
-	var splitArray=currentLocatn.split('/');
-	var path=currentLocatn.substring(0,currentLocatn.indexOf(splitArray[splitArray.length-1]));
-	 $.get("https://github.com/jayapalu/custardapple/tree/master/images", function(data) 
+	
+//	var currentLocatn=window.location.href;
+//	var splitArray=currentLocatn.split('/');
+//	var path=currentLocatn.substring(0,currentLocatn.indexOf(splitArray[splitArray.length-1]));
+	 /*$.get("https://github.com/jayapalu/custardapple/tree/master/images", function(data) 
         {
             alert(data);
-        });
+        });*/
+    
+	var pgSize=10;
+	for(var i=1; i<(images.length/pgSize)+1; i++){
+		$('#galleryPages').append("<li><div href='#' onclick='loadNextImgs("+i+","+pgSize+")'>"+i+"</div></li>");
+	}
+	
+	for(var i=0; i<pgSize; i++) {
+	    $('#galleryLoader').append('<img src="'+images[i]+'" alt="" class="col-sm-2 galleryEachImg pop" onclick="zoomImage(this)" />');
+	}
+}
+
+function loadNextImgs(i,pgSize){
+	var arrayLeng=images.length;
+	if(i==1){
+		$('#galleryLoader').empty();
+		for(var iNo=0; iNo<pgSize; iNo++) {
+	   		 $('#galleryLoader').append('<img src="'+images[iNo]+'" alt="" class="col-sm-2 pop galleryEachImg"  onclick="zoomImage(this)" />');
+		} 
+	} else if(i==arrayLeng-1){
+		var repro=((i-1)*pgSize)-1;
+		$('#galleryLoader').empty();
+		for(var iNo=repro; iNo<arrayLeng-1; iNo++) {
+	  		 $('#galleryLoader').append('<img src="'+images[iNo]+'" alt="" class="col-sm-2 pop galleryEachImg" onclick="zoomImage(this)" />');
+		} 
+	} else{
+		$('#galleryLoader').empty();
+		var repro=((i-1)*pgSize)-1;
+		for(var iNo=repro; iNo<repro+pgSize; iNo++) {
+	  	  	 $('#galleryLoader').append('<img src="'+images[iNo]+'" alt="" class="col-sm-2 pop galleryEachImg" onclick="zoomImage(this)" />');
+		}
+	}
+
+	
+}
+
+function zoomImage($event){
+			$('.imagepreview').attr('src', $event.src);
+			$('#imagemodal').modal('show');  
 }
 

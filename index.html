@@ -10,7 +10,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script type="text/javascript" src="custards.js"></script>
-  <script src="https://maps.google.com/maps/api/js"></script>
+  <script src="https://maps.google.com/maps/api/js?sensor=false" type="text/javascript"></script>
   <!--For pdf icon-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel = "stylesheet" type = "text/css" href = "custards.css" />
@@ -50,11 +50,11 @@
   </div>
 
 <!-- Container (About Section) -->
-<div id="Home" class="container-fluid">
+<div id="Home" class="container-fluid adjustTopNBottom">
   <div class="row">
     <div class="col-sm-4">
-      <h1 class="aboutH1"> My Custard Apple Farm updates</h1>
-        <p class="aboutPara">Our custard apple farm is planted on end of July 2016.
+      <h1 class="aboutH1 text-left"> My Custard Apple Farm updates</h1>
+        <p class="aboutPara text-left">Our custard apple farm is planted on end of July 2016.
           Exepecting first harvesting in 2019.
         </p>
     </div>
@@ -117,11 +117,11 @@
 <hr>
 
 <!--Container(My Farm) Section-->
-<div id="custardapplefarm" class="container-fluid">
+<div id="custardapplefarm" class="container-fluid adjustTopNBottom1">
   <div class="row col-lg-12 col-md-12 col-sm-12">
       <h2 class="text-center aboutH1">Our Custard Apple Farm</h2>
-      <h2 class="text-center aboutH1">FAQ</h2>
-  <div class="row  col-md-10 ">
+      <h2 class="aboutH1">FAQ</h2>
+  <div class="row  col-md-12 ">
       <p class="myFarmParaQue"> 1. How many acres of custard apples planted ?</p>
       <p class="myFarmParaAns">  Three acres </p>
       <p class="myFarmParaQue">2. What is distance followed for the custard apple plantion ? </p>
@@ -147,34 +147,49 @@
 <hr>
 
 <!-- Container (Resources Section) -->
-<div id="resources" class="container-fluid">
-  <h2 class="aboutH1">RESOURCES</h2>
+<div id="resources" class="container-fluid adjustTopNBottom2">
+  <h2 class="aboutH1 text-center">RESOURCES</h2>
   <h4>General resources for the custard apple farm are below: </h4></br>
-  <h5 class="aboutPara"><span class="glyphicon glyphicon-tree-deciduous"></span> 1. Custard apple guide <a href="resources/CustadAppleCompleteGuide.pdf" target="_blank"><span class="fa fa-file-pdf-o"></span></a></h5>
-  <h5 class="aboutPara"><span class="glyphicon glyphicon-tree-deciduous"></span> 2. Custard apple <a href="resources/CustadAppleCompleteGuide.pdf" target="_blank"><span class="fa fa-file-pdf-o"></span></a></h5>
-  <h5 class="aboutPara"><span class="glyphicon glyphicon-tree-deciduous"></span> 3. CustardAppleInfoKit Qeensland Govt <a href="resources/ICustardAppleInfoKit.pdf" target="_blank"><span class="fa fa-file-pdf-o"></span></a></h5>
-  <h5 class="aboutPara"><span class="glyphicon glyphicon-tree-deciduous"></span> 4. IPM package for Custard Apple <a href="resources/IPM package for Custard Apple.pdf" target="_blank"><span class="fa fa-file-pdf-o"></span></a></h5>
+  <h5 class="aboutPara resources-align"><span class="glyphicon glyphicon-tree-deciduous"></span> 1. Custard apple guide <a href="resources/CustadAppleCompleteGuide.pdf" target="_blank"><span class="fa fa-file-pdf-o"></span></a></h5>
+  <h5 class="aboutPara resources-align"><span class="glyphicon glyphicon-tree-deciduous"></span> 2. Custard apple <a href="resources/CustadAppleCompleteGuide.pdf" target="_blank"><span class="fa fa-file-pdf-o"></span></a></h5>
+  <h5 class="aboutPara resources-align"><span class="glyphicon glyphicon-tree-deciduous"></span> 3. CustardAppleInfoKit Qeensland Govt <a href="resources/ICustardAppleInfoKit.pdf" target="_blank"><span class="fa fa-file-pdf-o"></span></a></h5>
+  <h5 class="aboutPara resources-align"><span class="glyphicon glyphicon-tree-deciduous"></span> 4. IPM package for Custard Apple <a href="resources/IPM package for Custard Apple.pdf" target="_blank"><span class="fa fa-file-pdf-o"></span></a></h5>
 
   <h4>If you want know about pruning and shaping open vase shape please refer the below documents</h4></br>
-  <h5 class="aboutPara"><span class="glyphicon glyphicon-tree-deciduous"></span> 5. Simple-Pruning-open-vase-shape-Guide <a href="resources/Simple-Pruning-open-vase-shape-Guide.pdf" target="_blank"><span class="fa fa-file-pdf-o"></span></a></h5>
-  <h5 class="aboutPara"><span class="glyphicon glyphicon-tree-deciduous"></span> 6.Training-and-pruning-fruit-trees-in-North-Carolina <a href="resources/Training-and-pruning-fruit-trees-in-north-carolina.pdf" target="_blank"><span class="fa fa-file-pdf-o"></span></a></h5>
+  <h5 class="aboutPara resources-align"><span class="glyphicon glyphicon-tree-deciduous"></span> 5. Simple-Pruning-open-vase-shape-Guide <a href="resources/Simple-Pruning-open-vase-shape-Guide.pdf" target="_blank"><span class="fa fa-file-pdf-o"></span></a></h5>
+  <h5 class="aboutPara resources-align"><span class="glyphicon glyphicon-tree-deciduous"></span> 6.Training-and-pruning-fruit-trees-in-North-Carolina <a href="resources/Training-and-pruning-fruit-trees-in-north-carolina.pdf" target="_blank"><span class="fa fa-file-pdf-o"></span></a></h5>
 </div>
 <hr>
 
-<!-- Container (Portfolio Section) -->
-<div id="gallery" class="container-fluid text-center">
+<!-- Gallery (Gallery Section) -->
+<div id="gallery" class="container-fluid text-center adjustTopNBottom3">
   <h2 class="aboutH1">GALLERY</h2>
-   
+  <div class="row">
+    <div id="galleryLoader" style="margin-left:3px;" >
+   </div>
+</div>
+<div class="container"> 
+  <ul class="pagination" id="galleryPages">
+  </ul>
+</div>
 </div>
 <hr>
 
-<!-- Container (Contact Section) -->
-<div id="contact" class="container-fluid">
+<!-- Contact (Contact Section) -->
+<div id="contact" class="container-fluid adjustTopNBottom4">
   <h2 class="text-center aboutH1">CONTACT</h2>
-  <div class="row">
-    <div class="col-sm-5">
+  <div class="row" style="margin-left:-5px;">
+    
+    <div class="col-sm-3 text-left">
+      <p class="aboutPara text-left ">Contact details</p>
+      <p><span class="fa fa-whatsapp"></span> +91-9866560003</p>
+      <p><span class="glyphicon glyphicon-envelope"></span>  jayapalatiiit@gmail.com</p>
+      <p><a class="fa fa-facebook" target="_blank" href="https://www.facebook.com/custardapplefarm"> Custard Apple Farm</a></p>
 
-      <p class="aboutPara">Contact details</p>
+    </div>
+    <div class="col-sm-3 text-left">
+
+      <p class="aboutPara text-left">Address</p>
 
       <p><span class="glyphicon glyphicon-map-marker"></span> V: Vinjapalli,
       <p> M: Koheda,</p>
@@ -183,17 +198,13 @@
       <!--
       <p> Pin: 505473</p>
       -->
-      <p><span class="fa fa-whatsapp"></span> +91-9866560003</p>
-      <p><span class="glyphicon glyphicon-envelope"></span>  jayapalatiiit@gmail.com</p>
-      <p><a class="fa fa-facebook" target="_blank" href="https://www.facebook.com/custardapplefarm"> Custard Apple Farm</a></p>
-
     </div>
-    <div class="col-sm-7 ">
-      <p class="aboutPara">About me</p>
-      <p class="aboutPara"> Me ... Jayapal Reddy, I am not a full time farmer. I have done M.Tech IIIT Hyd, currently am working as software Engg in Hyderabad. My
-        family backround is agriculture  and some how I got interested in farming and got motivation from prof.Ram Reddy
-      scientist in GRC (grape research center, Hyd) and started custard apple farming. I strongly believed that this
-      crop going to be profitable in coming years.</p>
+    <div class="col-sm-6">
+      <p class="aboutPara text-left">About me</p>
+      <p class="aboutPara text-justify"> I am Jayapal Reddy, I am not a full time farmer. I have done M.Tech from IIIT Hyderabad, currently working as a Software Engg at Hyderabad. My
+        family backround is agriculture  and I am interested in farming and got motivation from prof.Ram Reddy
+      scientist in GRC (grape research center, Hyd) and started custard apple farming. I strongly believe that this
+      crop growing will be profitable in the future.</p>
 
     </div>
   </div>
@@ -201,11 +212,20 @@
 
 <!--Map section-->
 <div class="row" >
-  <div class="col-sm-1"></div>
-  <div class="col-sm-10" id="locateOnMap" style="height: 500px;"></div>
-  <div class="col-sm-1"></div>
+  <div class="adjustTopNBottom5" id="locateOnMap"></div>
 </div>
-<hr>
+
+<div class="modal fade" id="imagemodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="margin-top:50px;">
+  <div class="modal-dialog">
+    <div class="modal-content">              
+      <div class="modal-body">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <img src="" class="imagepreview" style="width: 500px; height: 500px;" >
+      </div>
+    </div>
+  </div>
+</div>
+
 
 <!-- Go to top-->
 <div class="text-right handLeftMov">

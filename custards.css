@@ -10,8 +10,31 @@
       font-weight: 600;
       margin-bottom: 30px;
   }
-  .handLeftMov{
-    margin-right: 50px;
+  
+  .adjustTopNBottom{
+    margin-top:-40px;
+    margin-bottom: -45px;
+  }
+   .adjustTopNBottom1{
+    margin-top:-75px;
+    margin-bottom: -65px;
+  }
+  .adjustTopNBottom2{
+    margin-top: -75px;
+    margin-bottom: -85px;
+  }
+  .adjustTopNBottom3{
+    margin-top: -80px;
+    margin-bottom: -80px;
+  }
+  .adjustTopNBottom4{
+    margin-top: -75px;
+    margin-bottom: -40px;
+  }
+  .adjustTopNBottom5{
+    margin-left: 75px;
+    height: 500px;
+    width:89%;
   }
   .aboutPara {
       font-size: 19px;
@@ -19,6 +42,9 @@
       color: #077524;
       font-weight: 400;
       margin-bottom: 30px;
+  }
+  .resources-align{
+    margin-left:40px;
   }
 
   .myFarmParaQue {
@@ -29,18 +55,24 @@
       margin-bottom: 10px;
   }
 
-
   .myFarmParaAns {
       font-size: 19px;
       line-height: 1.475em;
       color: #047b3f;
       font-weight: 400;
       margin-bottom: 10px;
-      margin-left: 20px
+      margin-left: 45px
   }
-
+  .galleryEachImg{
+    margin-bottom:30px; height:200px
+  }
+.handLeftMov{
+    margin-right: 50px;
+  }
   .footerHandSign{
     font-size: 40px;
+    color:#7bbc01;
+    margin-top:10px;
   }
   .jumbotron {
       color: #026;
@@ -65,10 +97,18 @@
       color:#026;
       font-size: 50px;
   }
+  .moveAbove {
+    margin-top:-35px;
+  }
   .logo {
       //color: #f4511e;
       color:#026;
       font-size: 200px;
+  }
+  .zoomImg{
+    z-index:9999;
+    height:700px;
+    width:100px;
   }
   .thumbnail {
       padding: 0 0 15px 0;
@@ -183,6 +223,53 @@
       -webkit-animation-duration: 1s;
       visibility: visible;
   }
+
+  #modal-background{
+   width: 100%;
+   height: 100%;
+   background-color: #000000;
+   position: fixed;
+   top: 0; left: 0;
+   display: none;
+   z-index: 99;
+}
+
+#modal-content{
+   background-color: #FFFFFF;
+   width: 500px;
+   height: 500px;
+   position: absolute;
+   left: 50%;
+   top: 50%;
+   margin-left: -250px;
+   margin-top: -250px;
+   z-index: 100;
+}
+
+.pagination>li>div, .pagination>li>span {
+    position: relative;
+    float: left;
+    padding: 6px 12px;
+    margin-left: -1px;
+    line-height: 1.42857143;
+    color: #337ab7;
+    text-decoration: none;
+    background-color: #fff;
+    border: 1px solid #ddd;
+  }
+
+  .pagination>li:first-child>a, .pagination>li:first-child>span {
+    margin-left: 0;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+.pagination>li {
+    display: inline;
+}
+.pagination>li:last-child>div, .pagination>li:last-child>span {
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
   @keyframes slide {
     0% {
       opacity: 0;
