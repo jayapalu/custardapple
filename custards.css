@@ -69,6 +69,10 @@
 .handLeftMov{
     margin-right: 50px;
   }
+
+.getDir{
+      margin-right: 80px;
+  }
   .footerHandSign{
     font-size: 40px;
     color:#7bbc01;
