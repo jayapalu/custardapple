@@ -47,19 +47,19 @@ $(document).ready(function(){
   });
 });
 var images = [
-	    'carousel/image1.jpg',
-	    'carousel/image2.jpg',
-	    'carousel/image3.jpg',
-	    'carousel/image4.jpg',
-	    'carousel/image5.jpg',
-	    'carousel/image6.jpg',
-	    'carousel/image1.jpg',
-	    'carousel/image2.jpg',
-	    'carousel/image3.jpg',
-	    'carousel/image4.jpg',
-	    'carousel/image5.jpg',
-	    'carousel/image6.jpg',
-	    'carousel/image7.jpg'
+	    'gallery/custardapple-gallery1.jpg',
+	    'gallery/custardapple-gallery2.jpg',
+	    'gallery/custardapple-gallery3.jpg',
+	    'gallery/custardapple-gallery4.jpg',
+	    'gallery/custardapple-gallery5.jpg',
+	    'gallery/custardapple-gallery6.jpg',
+	    'gallery/custardapple-gallery7.jpg',
+	    'gallery/custardapple-gallery8.jpg',
+	    'gallery/custardapple-gallery9.jpg',
+	    'gallery/custardapple-gallery10.jpg',
+	    'gallery/custardapple-gallery11.jpg',
+	    'gallery/custardapple-gallery12.jpg',
+	    'gallery/custardapple-gallery13.jpg'
 	];
 function loadMap() {
   var coords = new google.maps.LatLng(18.20102, 79.10076);
