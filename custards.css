@@ -78,6 +78,12 @@
     color:#7bbc01;
     margin-top:10px;
   }
+  .titleColor{
+      color:#026 !important;
+      font-size: 20px;
+      font-weight: bold;
+      padding: 5px;
+ }
   .jumbotron {
       color: #026;
       padding: 100px 25px;
@@ -207,7 +213,7 @@
       font-family: Montserrat, sans-serif;
   }
   .navbar li a, .navbar .navbar-brand {
-      color: #fff !important;
+      color: #fff;
   }
   .navbar-nav li a:hover, .navbar-nav li.active a {
      // color: #f4511e !important;
