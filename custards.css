@@ -64,7 +64,7 @@
       margin-left: 45px
   }
   .galleryEachImg{
-    margin-bottom:30px; height:200px
+    margin-bottom:30px; height:200px; cursor: pointer;
   }
 .handLeftMov{
     margin-right: 50px;
@@ -242,6 +242,10 @@
    top: 0; left: 0;
    display: none;
    z-index: 99;
+}
+
+.modalDialog{
+  width:532px !important;
 }
 
 #modal-content{
